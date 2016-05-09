@@ -1,5 +1,5 @@
 var showtime = new Howl({
-	src: ["audio/showtime.ogg"],
+	src: ["audio/showtime.ogg", "audio/showtime.mp3"],
 	loop: true,
 });
 
