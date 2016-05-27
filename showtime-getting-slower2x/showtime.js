@@ -12,6 +12,9 @@ var rate_timer = percent_time;
 
 function update() {
 
+	var divwidth = document.getElementById('bg').offsetWidth;
+	var divheight = document.getElementById('bg').offsetHeight;
+
 	var new_time = new Date();
 	var delta = new_time.getTime() - update_time.getTime();
 	update_time.setTime(new_time.getTime());
@@ -25,7 +28,8 @@ function update() {
 		document.getElementById("speed").innerHTML = "speed: " + (1 / inv_rate * 100).toFixed(2) + "%";
 		document.getElementById("john").style.opacity = 1 / inv_rate / inv_rate;
 	}
-
+	document.getElementById("john").style.top = (divheight-500)/2 + "px";
+	document.getElementById("john").style.left = (divwidth-500)/2 + "px";
 	requestAnimationFrame(update);
 }
 
