@@ -1,4 +1,4 @@
-@import url("webfont.css");
+@import url("webcomic.css");
 
 html, body {
 	background-color: black;
@@ -6,17 +6,29 @@ html, body {
 	font-family: "Courier New", Courier, monotype;
 	font-weight: normal;
 	font-size: 24px;
-	text-align: center;
+	overflow: hidden;
 }
 
 #bg {
-	display: inline-block;
-	width: 640px;
-	height: 440px;
-	margin-top: 20px;
+	display: block;
+	position: fixed;
+	width:  100%;
+	height:  100%;
 	overflow: hidden;
-	text-align: center;
 }
+
+#john {
+	position: absolute;
+}
+
+#speed {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+	bottom : 1em;
+}
+
 
 a{
 	color: #00ffff;
@@ -29,10 +41,9 @@ a:hover{
 
 div.bottom-notice {
 	position: absolute;
-	bottom: 0.5em;
-	left: 0;
-	right: 0;
 	text-align: center;
+	width: 100%;
+	bottom: 0.5em;
 	font-size: 50%;
 	opacity: 0.3;
 	transition: all 0.2s ease;
